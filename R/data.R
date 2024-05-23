@@ -230,36 +230,39 @@
 #'   for full details and how data were extracted from IPHC website.
 "setData2020"
 
-#' Count data for 2021 and 2022 IPHC survey (following 2020 approach since 20-hooks again)
+#' Count data for 2021 and 2022 and 2023 IPHC surveys (following 2020 approach since 20-hooks again)
 #'
 #' Datasets containing counts of each species for each
-#' station for the 2021 (`countData2021`) and 2022 (`countData2022`) IPHC surveys.
+#' station for the 2021 (`countData2021`) and 2022 (`countData2022`) and 2023 (`countData2023`) IPHC surveys.
 #'
 #' @format A tibble:
 #' \describe{
 #'
-#'   \item{year}{2021 or 2022}
+#'   \item{year}{2021 or 2022 or 2023}
 #'   \item{station}{station name}
 #'   \item{spNameIPHC}{species name for the counts for that set}
 #'   \item{specCount}{count of that species for that set}
 #' }
 #' @source See `data-raw/iphc-2021-data.Rmd` and saved
 #'   `data-raw/iphc-2021-data.pdf` for full details and how data were
-#'   extracted from IPHC website, and similar for 2022.
+#'   extracted from IPHC website, and similar for 2022 and 2023.
 "countData2021"
 
 #' @rdname countData2021
 "countData2022"
 
-#' Station data for 2021 and 2022 IPHC surveys (following 2020 approach since 20-hooks again)
+#' @rdname countData2021
+"countData2023"
+
+#' Station data for 2021 and 2022 and 2023 IPHC surveys (following 2020 approach since 20-hooks again)
 #'
 #' A dataset containing details of the stations for the 2021 (`setData2021`) and
-#' 2022 (`setData2022`)
+#' 2022 (`setData2022`) and 2023 (`setData2023`)
 #' IPHC surveys; one set was deployed at each station.
 #'
 #' @format A tibble:
 #' \describe{
-#'   \item{year}{2021 or 2022}
+#'   \item{year}{2021 or 2022 or 2023}
 #'   \item{station}{station name}
 #'   \item{lat}{latitude of station}
 #'   \item{lon}{longitude of station}
@@ -278,11 +281,14 @@
 #' }
 #' @source See `data-raw/iphc-2021-data.Rmd` and `data-raw/iphc-2021-data.pdf`
 #'   for full details and how data were extracted from IPHC website, and similar
-#'   files for 2022.
+#'   files for 2022 and 2023.
 "setData2021"
 
 #' @rdname setData2021
 "setData2022"
+
+#' @rdname setData2021
+"setData2023"
 
 #' Conversion from GFbio names to IPHC species names (for data not in GFbio)
 #'

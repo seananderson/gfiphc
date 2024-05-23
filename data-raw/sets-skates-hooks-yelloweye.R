@@ -9,13 +9,13 @@
 # See README for details of order to update files; for example,
 #  iphc-2021-data.Rmd needs to be done before this one.
 
-load_all()
+devtools::load_all()
 
 # Before running all this code (but after updating get_all_iphc_set_counts() to
-#  include new year), run these two lines (with 2022 replaced by current year)
+#  include new year), run these two lines (with 2023 replaced by current year)
 yyr_test <- get_all_iphc_set_counts("yelloweye rockfish")
 tail(yyr_test)                                # confirms latest year gets extracted
-testthat::expect_equal(dplyr::filter(yyr_test, year < 2022),
+testthat::expect_equal(dplyr::filter(yyr_test, year < 2023),
                        yelloweye_rockfish$set_counts)   # this will fail once the saved
                                                         # yelloweye_rockfish is updated below
 

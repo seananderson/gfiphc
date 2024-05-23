@@ -136,6 +136,7 @@ if (getRversion() >= "2.15.1") {
     "write.csv", "setData2020",
     "countData2021", "setData2021",
     "countData2022", "setData2022",
+    "countData2023", "setData2023",
 
     # others
     "parent_rsty_id", "parent_taxonomic_unit", "row_version", "rsty_id",

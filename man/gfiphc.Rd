@@ -2,8 +2,20 @@
 % Please edit documentation in R/gfiphc.R
 \docType{package}
 \name{gfiphc}
+\alias{gfiphc-package}
 \alias{gfiphc}
 \title{gfiphc package}
 \description{
 gfiphc package
+}
+\author{
+\strong{Maintainer}: Andrew M. Edwards \email{a@a.com}
+
+Authors:
+\itemize{
+  \item Sean C. Anderson
+  \item Elise A. Keppel
+  \item Chris J. Grandin
+}
+
 }

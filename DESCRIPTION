@@ -1,6 +1,6 @@
 Package: gfiphc
 Title: Data Extraction and Analysis for Groundfish Data from the IPHC Longline Survey in BC
-Version: 1.2.0
+Version: 1.3.0
 Authors@R:
     c(person(c("Andrew", "M."), "Edwards", email = "a@a.com", role = c("cre", "aut")),
       person(c("Sean", "C."), "Anderson", role = "aut"),
@@ -15,7 +15,7 @@ License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
 Imports:
     magrittr,
