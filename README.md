@@ -143,6 +143,8 @@ So, for 2021 I wrote this, and used for 2022:
  
 1. Update version number (1.3.0 has included the 2023 data) and email colleagues. <!-- Groundfish section, Maria, Jennifer, Beau, Elise, Ann-Marie, Jackie, ... -->
 
+1. Update NEWS.md
+
 ## Citation
 
 If you use this package please cite it as it is helpful for maintaining it:

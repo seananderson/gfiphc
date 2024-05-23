@@ -29,11 +29,6 @@ Panel of maps
 \description{
 Plot a panel of maps
 }
-\examples{
-\dontrun{
-
-}
-}
 \author{
 Andrew Edwards
 }
