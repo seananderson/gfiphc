@@ -1,9 +1,10 @@
-#' gfiphc package
-#'
-#' gfiphc package
-#'
-#' @docType package
-#' @name gfiphc
+#' @keywords internal
+"_PACKAGE"
+
+## usethis namespace: start
+## usethis namespace: end
+NULL
+
 #' @importFrom dplyr filter mutate summarise select group_by n arrange ungroup
 #' @importFrom dplyr inner_join left_join right_join anti_join full_join
 #' @importFrom dplyr semi_join
@@ -136,10 +137,13 @@ if (getRversion() >= "2.15.1") {
     "write.csv", "setData2020",
     "countData2021", "setData2021",
     "countData2022", "setData2022",
+    "countData2023", "setData2023",
 
     # others
     "parent_rsty_id", "parent_taxonomic_unit", "row_version", "rsty_id",
     "species_grouping", "taxonomic_rank",
+
+    "N_it20_sum", "N_it_sum",
 
     # other
     "usability_code",

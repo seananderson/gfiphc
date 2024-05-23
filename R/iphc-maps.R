@@ -360,10 +360,6 @@ add_stations <- function(set_counts_of_sp_one_year,
 ##' @return Panel of maps
 ##' @export
 ##' @author Andrew Edwards
-##' @examples
-##' \dontrun{
-##'
-##' }
 plot_iphc_map_panel <- function(set_counts_of_sp,
                                 sp_short_name,
                                 years_to_show,

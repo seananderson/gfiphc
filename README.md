@@ -64,6 +64,7 @@ Note that the analyses still exclude hook competition, but we are working on tha
 Updates since the report that had 2021 data are:
 
 - 2022 data included. The survey had two extra new stations that had never been fished before; these are excluded in [iphc-2022-data.pdf](data-raw/iphc-2022-data.pdf).
+- 2023 data included. The survey had eight extra new stations that had never been fished before; these are excluded in [iphc-2023-data.pdf](data-raw/iphc-2023-data.pdf).
 
 
 ## Differing data-collection protocols
@@ -87,6 +88,7 @@ A particular issue is that the data resolution is not the same across the years.
 |2020         |First 20 of each skate    |Set-by-set         |gfiphc package         |N      |
 |2021         |First 20 of each skate    |Set-by-set         |gfiphc package         |Y (reduced)      
 |2022         |First 20 of each skate    |Set-by-set         |gfiphc package         |Y (reduced)      
+|2023         |First 20 of each skate    |Set-by-set         |gfiphc package         |Y (reduced)
 
 <!-- for putting back into gfsynopsis, note that 2018 is now separated out) -->
 In 2018 there were extra expansion stations surveyed (see the vignettes), and in 2020 only the first 20 hooks were enumerated. For 2020-2022, the data were downloaded from the IPHC website and included in the package (see below). For 2021  and 2022 the waters off the WCVI were surveyed, but only a subsample of stations were surveyed. This does not affect the Series A, B, and AB calculations, but would affect the Series D and CD calculations (since we assume 2021 still surveys the full coast), and will slightly affect the determination of whether or not Series AB (usually the longest series that can be constructed) can be considered representative of the full coast. Newer methods are being developed that will deal with such subsampling and so it has not been further dealt with here. 
@@ -111,11 +113,13 @@ each set, so look into that if necessary.
 
 ## Instructions for importing and checking new data into gfiphc each year and re-running the vignettes
 
-For 2020-2022, only the first 20 hooks were evaluated from each skate. So, like for 2013, the data have been included in this package. For future years, copy the code `data-raw/iphc-2022-data.Rmd` (and rename for a new year) and follow the instructions for downloading the data from the IPHC website, checking the data, and saving it formatted for this package. The results [iphc-2020-data.pdf](data-raw/iphc-2020-data.pdf), [iphc-2021-data.pdf](data-raw/iphc-2021-data.pdf), and [iphc-2022-data.pdf](data-raw/iphc-2022-data.pdf) are also available for easier reading (only commit a final version of future .pdf's, not as you are working on it).
+For 2020-2023, only the first 20 hooks were evaluated from each skate. So, like for 2013, the data have been included in this package. For future years, copy the code `data-raw/iphc-2022-data.Rmd` (and rename for a new year) and follow the instructions for downloading the data from the IPHC website, checking the data, and saving it formatted for this package. The results [iphc-2020-data.pdf](data-raw/iphc-2020-data.pdf), [iphc-2021-data.pdf](data-raw/iphc-2021-data.pdf), [iphc-2022-data.pdf](data-raw/iphc-2022-data.pdf), and
+[iphc-2023-data.pdf](data-raw/iphc-2023-data.pdf)
+are also available for easier reading (only commit a final version of future .pdf's, not as you are working on it).
 
 So, for 2021 I wrote this, and used for 2022:
 
-1. Adapt `data-raw/iphc-2021-data.Rmd` as just described.
+1. Adapt `data-raw/iphc-2021-data.Rmd` and adjust as described.
 
 1. Create/adapt new functions to include the data in the calculations. For data in GFbio this should be automatic, else see what was done just after commit a5ecd2a for 2020, or (easier) see these notes updated in 2021:
 
@@ -129,7 +133,7 @@ So, for 2021 I wrote this, and used for 2022:
 
 1. Re-run (line by line to check) `data-raw/sets-skates-hooks-yelloweye.R` to save some more new data into package.
 
-1. Go through and rerun the vignettes (first copying old results into `vignettes-results-XXXX-data/`, XXXX is previous last year of data, to keep if needed), adapting any called functions or printed results as necessary to include latest year of data, making sure the latest year is included and the maps make sense. Need `install(build_vignettes = FALSE)` first as they use the library version.
+1. Go through and rerun the vignettes (first copying old results into `vignettes-results-XXXX-data/`, XXXX is previous last year of data, to keep if needed), adapting any called functions or printed results as necessary to include latest year of data, making sure the latest year is included and the maps make sense. Need `devtools::install(build_vignettes = FALSE)` first as they use the library version.
 
 1. May have to repeat this process as necessary. For example, in 2020 I saved the data, but then kept examining it in `data-raw/iphc-2020-data.Rmd`, realising needed to change a `standard` designation in `setDataExpansion`, so then had to rerun all of these steps to update all .rda files. In 2021 I hadn't originally noticed the six extra stations (I thought they were doing a subset, not expanding a a bit), so had to go back to step 1 and expand the default northern extent of all maps and assign the new stations as `non-standard`.
 
@@ -137,7 +141,11 @@ So, for 2021 I wrote this, and used for 2022:
 
 1. Update the two tables above of what data are available each year and what Series can be made, checking with vignettes. Add notes as necessary.
  
-1. Update version number (1.2.0 has included the 2022 data) and email colleagues. <!-- Groundfish section, Maria, Jennifer, Beau, Elise, Ann-Marie, Jackie, ... -->
+1. Update version number (1.3.0 has included the 2023 data) and email colleagues. <!-- Groundfish section, Maria, Jennifer, Beau, Elise, Ann-Marie, Jackie, ... -->
+
+1. Update NEWS.md
+
+1. `git add -f data/countData2023.rda` and `git add -f data/setData2023.rda`. Commit all other edits and push to GitHub.
 
 ## Citation
 

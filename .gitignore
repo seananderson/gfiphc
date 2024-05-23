@@ -15,7 +15,6 @@
 inst/doc
 *.rds
 *.gif
-
 vignettes/*.html
 vignettes/*.R
 vignettes/yeyeForBeauSep19.R
@@ -24,7 +23,6 @@ vignettes/for-jen-earlier-versions/*.*
 vignettes/HG-herring-predators-results/*
 vignettes/*.7z
 vignettes/vignettes-results-*-data/
-
 /data-raw/herring-predators-HG/
 /data-raw/Non-Pacific halibut data.xlsx
 /data-raw/all-2018-stations-before-updating-with-expansion-shown.png
@@ -33,7 +31,7 @@ vignettes/vignettes-results-*-data/
 /data-raw/~$set-and-halibut-data-1998-2020.xlsx
 /data-raw/non-halibut-data-2022.csv
 /data-raw/set-and-halibut-data-2022.csv
-
 *.xlsx
 /vignettes/species-in-sog-2018.csv
 /vignettes/species-not-in-sog-2018.csv
+vignettes-results-2022-data
