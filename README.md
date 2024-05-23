@@ -145,6 +145,8 @@ So, for 2021 I wrote this, and used for 2022:
 
 1. Update NEWS.md
 
+1. `git add -f data/countData2023.rda` and `git add -f data/setData2023.rda`. Commit all other edits and push to GitHub.
+
 ## Citation
 
 If you use this package please cite it as it is helpful for maintaining it:
